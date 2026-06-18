@@ -20,5 +20,7 @@ static 成员函数，没有this指针，不能访问非static成员
 
 volatile 变量可能被外部修改，硬件、中断 volatile int x;
 
+constexpr 编译器就完成计算
+
 
 
