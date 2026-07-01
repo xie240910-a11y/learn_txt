@@ -51,8 +51,14 @@ kubectl cp -n lenovo04 ice47-0:/opt/supcon/ice/bin/pacp.pacp ./pacp.pacp
 查看 statefulset 根据命名空间
 kubectl get statefulset -n lenovo07
 
+设置某个pod启动个数
+kubectl scale statefulset -n macchi-5 modbus92 --replicas=2
+
 打印statefulset的配置
 kubectl get statefulset device-center7 -n lenovo07 -o yaml
+
+获取pod 的yaml文件配置信息
+kubectl get sts modbus92 -n macchi-5 -o yaml
 
 修改statefulset配置
 kubectl edit statefulset device-center7 -n lenovo07
@@ -69,3 +75,4 @@ kubectl config get-contexts
 
 切换集群环境
 kubectl config use-context macchi-admin@macchi
+
